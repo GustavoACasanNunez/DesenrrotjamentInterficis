@@ -1,0 +1,20 @@
+Entrega1
+Pon en marcha el código puesto a tu disposición y realiza los ejercicios 1, 2 y 3.
+
+import javax.swing.JFrame;
+
+public class PrimeraVentana extends JFrame {
+    public PrimeraVentana () {
+        super("Mi primera ventana");
+        setSize(600,600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+    public static void main(String[] args) {
+        new PrimeraVentana();
+    }
+}
+
+1)    Cambia el color de fondo a uno más “chulo”.
+2)    Coloca la ventana en el centro,
+3)    Coloca una imagen de fondo de la ventana.
