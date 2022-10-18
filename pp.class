@@ -1,0 +1,41 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class pp extends JFrame {
+    public pp () {
+        super("Mi primera ventana");
+        setSize(300,300);
+        setBackground(new Color(0, 64, 128));
+        setSize(600, 600);
+        JButton button = new JButton("Pulsa aquí");
+        button.setFont(new Font("Arial", Font.PLAIN, 11));
+        button.setBounds(20, 30, 30, 30);
+        button.setForeground(Color.BLUE);
+        button.setBackground(Color.white);
+        button.setToolTipText("Esto es una prueba");
+        getContentPane().add(button, BorderLayout.NORTH);
+
+        JTextField textField1 = new JTextField();
+        textField1.setBounds(90, 60, 100, 30);
+        textField1.setHorizontalAlignment(JTextField.RIGHT);
+        textField1.setText("Y aún otra prueba");
+        textField1.setBackground(Color.pink);
+        add(textField1);
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+    public static void main(String[] args) {
+        pp i= new pp();
+
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Dimension screenSize = toolkit.getScreenSize();
+        String resolucion = "La resolución de la pantalla es de " +
+                (int)screenSize.getWidth() + " x " +
+                (int)screenSize.getHeight();
+
+        JOptionPane.showMessageDialog(null, resolucion,
+                "Resolución de la pantalla",
+                JOptionPane.INFORMATION_MESSAGE);
+    }
+}
